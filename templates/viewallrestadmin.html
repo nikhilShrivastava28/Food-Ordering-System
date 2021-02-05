@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   
+
+
+</head>
+
+<body >
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome">Register a Restaurant <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewallrestadmin">All Restaurants <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminlogout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        {% for rest in allrest %}
+        <div class="container">
+            <div class="jumbotron">
+                <img src="/static/res1.png" alt="Food" width="110" height="110">
+                <p>Restaurant {{rest.rname }}.</p>
+                <p>Located at {{rest.raddress}}</p>
+                <p>Contact: {{rest.rmobile}}</p>
+
+                <!-- <p class="lead">
+                    <a class="btn btn-primary btn-danger btn-sm float-right " href="/deleterest" role="button">Delete Restaurant and Logout</a>
+                </p> -->
+
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </header>

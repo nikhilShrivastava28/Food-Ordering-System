@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+
+</head>
+
+<body class="text-center" data-new-gr-c-s-check-loaded="14.991.0" data-gr-ext-installed="">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/resthome">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewrestmenu">Menu <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addrestitem">Add Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/updaterestitem">Update Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/removerestitem">Remove Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/restupdate">Update Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/restlogout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br><br><br>
+    <header id="header">
+
+        <div class="container">
+            <div class="center">
+                <div class="intro-text">
+
+                    <div class="spacing">
+                        <div class="center">
+                            <div class="col-xs-4 col-xs-offset-4">
+                                <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+                                <div class="col text-center">
+                                <h2 style="font-family: Lucida Console; color:steelblue; background-color:#DCDCDC">
+                                    Updated Restaurant Profile</h2>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rid" style="color:khaki ">
+                                        <h4>Restaurant Id</h4>
+                                    </label>
+                                    <input type="text" class="form-control" id="rid" name="rid" value={{restinfo.rid}}
+                                        readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="rname" style="color:khaki  ">
+                                        <h4>Restaurant Name</h4>
+                                    </label>
+                                    <input type="text" class="form-control" id="rname" name="rname"
+                                        value={{restinfo.rname}} readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rmail" style="color:khaki ">
+                                        <h4>Restaurant Email Id</h4>
+                                    </label>
+                                    <input type="text" class="form-control" id="rmail" name="rmail"
+                                        value={{restinfo.rmail}} readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="rmobile" style="color:khaki ">
+                                        <h4>Restaurant Mobile</h4>
+                                    </label>
+                                    <input type="text" class="form-control" id="rmobile" name="rmobile"
+                                        value={{restinfo.rmobile}} readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="raddress" style="color:khaki ">
+                                        <h4>Restaurant Address</h4>
+                                    </label>
+                                    <input type="text" class="form-control" id="raddress" name="raddress"
+                                        value={{restinfo.raddress}} readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rpassword" style="color:khaki ">
+                                        <h4>Password</h4>
+                                    </label>
+                                    <input type="password" class="form-control" id="rpassword" name="rpassword"
+                                        value={{restinfo.rpassword}} readonly>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </header>
+    <br><br>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>Just a Food Ordering System</p>
+            <p>Contact me through <a href="https://www.linkedin.com/in/nikhil-shrivastava-0504b0146/">Linkedin</a> or
+                send me an <a href="mailto: 17ucc038@lnmiit.ac.in">Email</a>
+        </div>
+    </footer>
+    <br>
+
+
+
+</body>
+
+</html>

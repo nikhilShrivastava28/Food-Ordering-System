@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body  >
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/resthome">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewrestmenu">Menu <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addrestitem">Add Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/updaterestitem">Update Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/removerestitem">Remove Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/restupdate">Update Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/restlogout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <header id="header">
+        <div class="section-title text-center center">
+            <div class="overlay">
+                <br><br><br>
+                <h2 style="color: khaki;">Welcome {{restaurant.rname}} !</h2>
+                <p> Your Menu Card</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="jumbotron">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Order Limit</th>
+                            
+
+                        </tr>
+                    </thead>
+                    
+                    {% for item in items %}
+                    
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{item.iid}}</th>
+                            <td>{{item.iname}}</td>
+                            <td>{{item.iprice}}</td>
+                            <td>{{item.ilimit}}</td>
+
+                            
+
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                    <tr>
+                        
+
+                    </tr>
+                </table>
+                <br>
+                
+            </div>
+        </div>
+    </header>
+
+    <br><br>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>Just a Food Ordering System</p>
+            <p>Contact me through <a href="https://www.linkedin.com/in/nikhil-shrivastava-0504b0146/">Linkedin</a> or send me an <a href = "mailto: 17ucc038@lnmiit.ac.in">Email</a>
+        </div>
+    </footer>
+    <br>
+    <br>
+
+</body>
+
+</html>

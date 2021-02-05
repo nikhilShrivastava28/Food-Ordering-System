@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/uhome">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/umenucard">Order Food <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/userupdate">View/Update Details <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart">Cart ({{session['FoodCart']|length}}) <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ulogout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <header id="header">
+        <br><br><br><br><br>
+        <div class="container">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="center">
+                        <div class="intro-text">
+
+                            <div class="spacing">
+                                <div class="center">
+                                    <div class="col-xs-4 col-xs-offset-4">
+                                        <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+
+                                        <div class="text-center">
+                                            <h2
+                                                style="font-family: Lucida Console; color:steelblue; background-color:#DCDCDC">
+                                                User Profile</h2>
+                                        </div>
+                                        <label for="cname" style="color:black">
+                                            <h4>User Id</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="cid" name="cid"
+                                            value={{cusinfo.cid}} readonly>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cname" style="color:black">
+                                            <h4>User Name</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="cname" name="cname"
+                                            value={{cusinfo.cname}} readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cname" style="color:black">
+                                            <h4>User Email Id</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="cmail" name="cmail"
+                                            value={{cusinfo.cmail}} readonly>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cname" style="color:black">
+                                            <h4>User Mobile</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="cmobile" name="cmobile"
+                                            value={{cusinfo.cmobile}} readonly>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cname" style="color:black">
+                                            <h4>User Address</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="caddress" name="caddress"
+                                            value={{cusinfo.caddress}} readonly>
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <br><br>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>Just a Food Ordering System</p>
+            <p>Contact me through <a href="https://www.linkedin.com/in/nikhil-shrivastava-0504b0146/">Linkedin</a> or
+                send me an <a href="mailto: 17ucc038@lnmiit.ac.in">Email</a>
+        </div>
+    </footer>
+    <br>
+
+
+
+</body>
+
+</html>

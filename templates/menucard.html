@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<br>
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <form >
+            <div class="center">
+                <div class="form-inline">
+                    <input type="text" class="form-control" id="restname" name="restname"
+                        placeholder="Search by Restaurant">
+                    &nbsp;
+                    <a type="submit" class="btn btn-success" href="/ulogin" value=”submit”>Search</a>
+                </div>
+            </div>
+        </form>
+    </nav>
+</div>
+
+
+{% for rest in allrest %}
+<div class="container">
+    <div class="jumbotron">
+        <img src="/static/res1.png" alt="Food" width="110" height="110">
+        <p>This is {{rest.rname }}.</p>
+        <p>Located at {{rest.raddress}}</p>
+        <p>Contact: {{rest.rmobile}}</p>
+
+        <p class="lead">
+            <a class="btn btn-primary btn-sm float-right" href="/ulogin" role="button">Order from {{rest.rname}}</a>
+        </p>
+
+
+    </div>
+
+</div>
+
+{% endfor %}
+{% endblock %}

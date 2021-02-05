@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+</head>
+
+
+<body>
+    <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome">Register a Restaurant <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewallrestadmin">All Restaurants <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminlogout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br><br>
+    <header id="header">
+        <div class="container">
+            <div class="jumbotron">
+                <div class="center">
+
+                    <p style="text-align:center; color:black;">Hey Admin ! Welcome back to</p>
+                    <h1 style="text-align:center; color:steelblue;">Jfos</h1>
+                    <div class="spacing">
+                        <div class="center">
+                            <h4 style="color:red"><b>{{errmsg}}</b></h4>
+                            <h4 style="color:lightgreen"><b>{{successmsg}}</b></h4>
+                            <div class="col-xs-4 col-xs-offset-4">
+                                <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+                                <div class="col text-center">
+                                    <h2 style="font-family: Lucida Console; color:#8B0000; background-color:#DCDCDC">
+                                        Register a Restaurant</h2>
+                                </div>
+
+                                <form action="/regrestadmin" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="rname" name="rname"
+                                            placeholder="Restaurant Name" required="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="rmail" name="rmail"
+                                            placeholder="Restaurant Email Id" required="true"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="rpassword" name="rpassword"
+                                            placeholder="Restaurant Temporary Password" required="true" pattern=".{6,}">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="rmobile" name="rmobile"
+                                            placeholder="Restaurant Mobile Number" required="true" pattern="[0-9]{10}">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="raddress" name="raddress"
+                                            placeholder="Address" required="true">
+                                    </div>
+                                    <div class="col text-center"><button type="submit" class="btn btn-primary"
+                                            value=”submit” onclick="">Register
+                                            Restaurant</button></div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                        <br><br>
+                        <div class="col text-center"> <a href='/viewallrestadmin'
+                                class="btn btn-success btn-lg">View all Restaurants</a>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+    </header>
+
+    <br><br>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>Just a Food Ordering System</p>
+            <p>Contact me through <a href="https://www.linkedin.com/in/nikhil-shrivastava-0504b0146/">Linkedin</a> or
+                send me an <a href="mailto: 17ucc038@lnmiit.ac.in">Email</a>
+        </div>
+    </footer>
+    <br>
+
+</body>
+
+</html>

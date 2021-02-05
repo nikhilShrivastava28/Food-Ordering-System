@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+
+
+<body>
+    <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/resthome">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewrestmenu">Menu <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addrestitem">Add Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/updaterestitem">Update Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/removerestitem">Remove Item <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/restupdate">Update Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/restlogout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <header id="header">
+        <div class="container">
+            <div class="center">
+                <div class="intro-text">
+
+                    <div class="spacing">
+                        <div class="center">
+                            <div class="col-xs-4 col-xs-offset-4">
+                                <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+                                <div class="col text-center">
+                                    <h2 style="font-family: Lucida Console; color:steelblue; background-color:#DCDCDC">
+                                        Add Item to your Menu</h2>
+                                </div>
+
+                                <form action='/addrestitemNext' method="POST">
+                                    <div class="form-group">
+                                        <label for="rid" style="color:khaki ">
+                                            <h4>Restaurant Id</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="rid" name="rid"
+                                            value={{restaurant.rid}} readonly>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="iname" style="color:khaki  ">
+                                            <h4>Item Name</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="iname" name="iname"
+                                            placeholder="Enter Item Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="iprice" style="color:khaki ">
+                                            <h4>Item Price</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="iprice" name="iprice"
+                                            placeholder="Enter Item Price">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ilimit" style="color:khaki ">
+                                            <h4>Order Limit</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="ilimit" name="ilimit"
+                                            placeholder="Enter Order Limit for the item">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="col text-center"><button type="submit" class="btn btn-success"
+                                                value=”submit”>Add
+                                                Item</button>
+                                            </div>
+
+                                    </div>
+
+
+
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <br><br>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>Just a Food Ordering System</p>
+            <p>Contact me through <a href="https://www.linkedin.com/in/nikhil-shrivastava-0504b0146/">Linkedin</a> or
+                send me an <a href="mailto: 17ucc038@lnmiit.ac.in">Email</a>
+        </div>
+    </footer>
+    <br>
+
+
+
+</body>
+
+</html>

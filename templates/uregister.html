@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block head %} {% endblock %}
+
+
+{% block body %}
+<header id="header">
+    <div class="overlay">
+        <div class="container">
+            <!-- <div class="row">color:#00CED1; background-color:#DCDCDC -->
+            <div class="intro-text">
+
+                <div class="spacing">
+                    <div class="center">
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <h4 style="color:red;" "background-color:white;"><b><i>{{cmsg}}</i></b></h4>
+                            <script src="{{ url_for('static',filename = 'validate.js') }}"></script>
+                            <div class="text-center">
+                                <h2 style="font-family: Lucida Console; color:#8B0000; background-color:#DCDCDC">SIGN UP
+                                </h2>
+                            </div>
+
+
+                            <form action="/uregisterNext" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="cname" name="cname" placeholder="Name"
+                                        required="true">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="cmail" name="cmail" placeholder="Email"
+                                        required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="cpassword" name="cpassword"
+                                        placeholder="Password" required="true" pattern=".{6,}">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="Re-Enter Password" required="true" pattern=".{6,}">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="cmobile" name="cmobile"
+                                        placeholder="Mobile number" required="true" pattern="[0-9]{10}">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="caddress" name="caddress"
+                                        required="true" placeholder="Address">
+                                </div>
+                                <div class="col text-center">
+                                    <button type="submit" class="btn btn-lg btn-outline-success" value=”submit”
+                                        onclick="validate()">Register</button>
+                                </div>
+                                <br><br><br>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
