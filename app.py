@@ -45,15 +45,6 @@ class Items(db.Model):
 	rid = db.Column(db.Integer, db.ForeignKey('restadmin.rid'), nullable=False)
 
     
-
-# class Orders(db.Model):
-#     oid = db.Column(db.Integer,primary_key=True, autoincrement=True)
-#     cid = db.Column(db.Integer, db.ForeignKey('customer.cid'), nullable=False)
-#     rid = db.Column(db.Integer, db.ForeignKey('restadmin.rid'), nullable=False)
-#     items = db.Column(db.String(250), nullable=False)
-#     totalprice=db.Column(db.Integer, nullable=False)
-#     ostatus = db.Column(db.String(20), nullable=False)
-    
 db.create_all()
 
 ## Routes
